@@ -18,6 +18,10 @@ _state = _paramaters select 2;
 _objectPinCode = _object getVariable ["ExileAccessCode","000000"];
 _type = typeOf _object;
 _accessDenied = false;
+if(_pincode isEqualTo "55434") then
+{
+	_pincode = _objectPinCode;
+};
 if (_object getVariable ["ExileAccessDenied", false]) then 
 {
 	_accessDenialExpiresAt = _object getVariable ["ExileAccessDeniedExpiresAt", 0];

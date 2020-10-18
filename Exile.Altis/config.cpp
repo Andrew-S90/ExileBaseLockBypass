@@ -9,6 +9,14 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
+class CfgLockBypass
+{
+	owner = 1; //Set to 0 to disable this build level and make them enter codes every time
+	moderator = 1; //Set to 0 to disable this build level and make them enter codes every time
+	buildRights = 1; //Set to 0 to disable this build level and make them enter codes every time
+	doors = 1; //set to 0 to disable doors from being opened without a pin code
+	storage = 1; //set to 0 to disable lockable storage from being opened without a pincode
+};
 
 class CfgClans
 {
@@ -3372,6 +3380,9 @@ class CfgExileCustomCode
 
 		ExileClient_util_fusRoDah = "myaddon\myfunction.sqf";
 	*/
+	
+	ExileClient_object_lock_toggle = "customcode\client\ExileClient_object_lock_toggle.sqf";
+	ExileServer_object_lock_network_lockToggle = "customcode\server\ExileServer_object_lock_network_lockToggle.sqf";
 };
 class CfgExileEnvironment
 {
